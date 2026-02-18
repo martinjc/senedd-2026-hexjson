@@ -12,7 +12,7 @@
 		"W000014":{"q":5,"r":12,"English_Na":"Bangor Conwy Môn","Enw_Cymrae":"Bangor Conwy Môn","":"","No_Rhif":1,"Segment":4,"name":"Bangor Conwy Môn","constituency_id":"W000010","colour":"#3cb44b"},
 		"W000015":{"q":6,"r":12,"English_Na":"Bangor Conwy Môn","Enw_Cymrae":"Bangor Conwy Môn","":"","No_Rhif":1,"Segment":5,"name":"Bangor Conwy Môn","constituency_id":"W000010","colour":"#3cb44b"},
 		"W000016":{"q":5,"r":11,"English_Na":"Bangor Conwy Môn","Enw_Cymrae":"Bangor Conwy Môn","":"","No_Rhif":1,"Segment":6,"name":"Bangor Conwy Môn","constituency_id":"W000010","colour":"#3cb44b"},
-		"W000111":{"q":9,"r":7,"English_Na":"Blaenau Gwent Caerffili Rhymni","Enw_Cymrae":"Blaenau Gwent Caerffili Rhymni","":"","No_Rhif":11,"Segment":1,"name":"Blaenau Gwent Caerffili Rhymni","constituency_id":"W000110","colour":"#ffe119"},
+		"W000111":{"q":9,"r":5,"English_Na":"Blaenau Gwent Caerffili Rhymni","Enw_Cymrae":"Blaenau Gwent Caerffili Rhymni","":"","No_Rhif":11,"Segment":1,"name":"Blaenau Gwent Caerffili Rhymni","constituency_id":"W000110","colour":"#ffe119"},
 		"W000112":{"q":8,"r":6,"English_Na":"Blaenau Gwent Caerffili Rhymni","Enw_Cymrae":"Blaenau Gwent Caerffili Rhymni","":"","No_Rhif":11,"Segment":2,"name":"Blaenau Gwent Caerffili Rhymni","constituency_id":"W000110","colour":"#ffe119"},
 		"W000113":{"q":9,"r":6,"English_Na":"Blaenau Gwent Caerffili Rhymni","Enw_Cymrae":"Blaenau Gwent Caerffili Rhymni","":"","No_Rhif":11,"Segment":3,"name":"Blaenau Gwent Caerffili Rhymni","constituency_id":"W000110","colour":"#ffe119"},
 		"W000114":{"q":8,"r":5,"English_Na":"Blaenau Gwent Caerffili Rhymni","Enw_Cymrae":"Blaenau Gwent Caerffili Rhymni","":"","No_Rhif":11,"Segment":4,"name":"Blaenau Gwent Caerffili Rhymni","constituency_id":"W000110","colour":"#ffe119"},
@@ -36,7 +36,7 @@
 		"W000144":{"q":7,"r":1,"English_Na":"Caerdydd Penarth","Enw_Cymrae":"Caerdydd Penarth","":"","No_Rhif":14,"Segment":4,"name":"Caerdydd Penarth","constituency_id":"W000140","colour":"#911eb4"},
 		"W000145":{"q":8,"r":1,"English_Na":"Caerdydd Penarth","Enw_Cymrae":"Caerdydd Penarth","":"","No_Rhif":14,"Segment":5,"name":"Caerdydd Penarth","constituency_id":"W000140","colour":"#911eb4"},
 		"W000146":{"q":8,"r":0,"English_Na":"Caerdydd Penarth","Enw_Cymrae":"Caerdydd Penarth","":"","No_Rhif":14,"Segment":6,"name":"Caerdydd Penarth","constituency_id":"W000140","colour":"#911eb4"},
-		"W000131":{"q":9,"r":5,"English_Na":"Casnewydd Islwyn","Enw_Cymrae":"Casnewydd Islwyn","":"","No_Rhif":13,"Segment":1,"name":"Casnewydd Islwyn","constituency_id":"W000130","colour":"#46f0f0"},
+		"W000131":{"q":12,"r":2,"English_Na":"Casnewydd Islwyn","Enw_Cymrae":"Casnewydd Islwyn","":"","No_Rhif":13,"Segment":1,"name":"Casnewydd Islwyn","constituency_id":"W000130","colour":"#46f0f0"},
 		"W000132":{"q":10,"r":4,"English_Na":"Casnewydd Islwyn","Enw_Cymrae":"Casnewydd Islwyn","":"","No_Rhif":13,"Segment":2,"name":"Casnewydd Islwyn","constituency_id":"W000130","colour":"#46f0f0"},
 		"W000133":{"q":11,"r":4,"English_Na":"Casnewydd Islwyn","Enw_Cymrae":"Casnewydd Islwyn","":"","No_Rhif":13,"Segment":3,"name":"Casnewydd Islwyn","constituency_id":"W000130","colour":"#46f0f0"},
 		"W000134":{"q":10,"r":3,"English_Na":"Casnewydd Islwyn","Enw_Cymrae":"Casnewydd Islwyn","":"","No_Rhif":13,"Segment":4,"name":"Casnewydd Islwyn","constituency_id":"W000130","colour":"#46f0f0"},
@@ -86,7 +86,7 @@
 		"W000106":{"q":6,"r":3,"English_Na":"Pontypridd Cynon Merthyr","Enw_Cymrae":"Pontypridd Cynon Merthyr","":"","No_Rhif":10,"Segment":6,"name":"Pontypridd Cynon Merthyr","constituency_id":"W000100","colour":"#fffac8"},
 		"W000121":{"q":11,"r":5,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":1,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
 		"W000122":{"q":12,"r":4,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":2,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
-		"W000123":{"q":12,"r":5,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":3,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
+		"W000123":{"q":9,"r":7,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":3,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
 		"W000124":{"q":10,"r":6,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":4,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
 		"W000125":{"q":11,"r":6,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":5,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
 		"W000126":{"q":10,"r":5,"English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen","":"","No_Rhif":12,"Segment":6,"name":"Sir Fynwy Torfaen","constituency_id":"W000120","colour":"#800000"},
@@ -98,5 +98,5 @@
 		"W000066":{"q":5,"r":6,"English_Na":"Sir Gaerfyrddin","Enw_Cymrae":"Sir Gaerfyrddin","":"","No_Rhif":6,"Segment":6,"name":"Sir Gaerfyrddin","constituency_id":"W000060","colour":"#aaffc3"}
 	},
 	"layout":"even-r",
-	"version":"0.2"
+	"version":"0.3"
 }
