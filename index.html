@@ -121,7 +121,7 @@
 
         function reset(event, d) {
             active.attr('opacity', '1.0');
-            active.attr('fill', '#ccc');
+            active.attr('fill', (d) => d.colour || '#ccc');
             active = d3.select(null);
 
             d3.select('#info')
@@ -134,7 +134,7 @@
                 reset(event, d);
             } else {
                 active.attr('opacity', '1.0')
-                active.attr('fill', '#ccc')
+                active.attr('fill', (d) => d.colour || '#ccc')
                 active = d3.select(this);
                 active.attr('opacity', '0.5')
                 active.attr('fill', '#000')
@@ -161,7 +161,7 @@
                     g.append('polygon')
                         .attr('points', (hex) => hex.points)
                         .attr('stroke', '#fff')
-                        .attr('fill', '#ccc')
+                        .attr('fill', (hex) => hex.colour || '#ccc')
                         .attr('stroke-width', 3)
                         .attr('id', (hex) => hex.key)
                         .attr('data-name', (hex) => hex.name)
@@ -176,7 +176,7 @@
                         .append('polygon')
                         .attr('points', (hex) => hex.points)
                         .attr('stroke', '#eee')
-                        .attr('fill', "#ccc")
+                        .attr('fill', (hex) => hex.colour || '#ccc')
                         .attr('stroke-width', 1)
                         .attr('id', (hex) => hex.key)
                         .attr('data-name', (hex) => hex.name)

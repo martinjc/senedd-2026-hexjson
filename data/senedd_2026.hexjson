@@ -1,22 +1,150 @@
 {
-	"layout":"odd-r",
-	"hexes":{
-		"W000090":{"q":1,"r":-3,"n":"9","No_Rhif":"9","English_Na":"Afan Ogwr Rhondda","Enw_Cymrae":"Afan Ogwr Rhondda"},
-		"W000030":{"q":4,"r":0,"n":"3","No_Rhif":"3","English_Na":"Fflint Wrecsam","Enw_Cymrae":"Fflint Wrecsam"},
-		"W000010":{"q":2,"r":0,"n":"1","No_Rhif":"1","English_Na":"Bangor Conwy Môn","Enw_Cymrae":"Bangor Conwy Môn"},
-		"W000110":{"q":3,"r":-3,"n":"11","No_Rhif":"11","English_Na":"Blaenau Gwent Caerffili Rhymni","Enw_Cymrae":"Blaenau Gwent Caerffili Rhymni"},
-		"W000080":{"q":4,"r":-2,"n":"8","No_Rhif":"8","English_Na":"Brycheiniog Tawe Nedd","Enw_Cymrae":"Brycheiniog Tawe Nedd"},
-		"W000150":{"q":3,"r":-4,"n":"15","No_Rhif":"15","English_Na":"Caerdydd Ffynnon Taf","Enw_Cymrae":"Caerdydd Ffynnon Taf"},
-		"W000140":{"q":2,"r":-4,"n":"14","No_Rhif":"14","English_Na":"Caerdydd Penarth","Enw_Cymrae":"Caerdydd Penarth"},
-		"W000060":{"q":0,"r":-3,"n":"6","No_Rhif":"6","English_Na":"Sir Gaerfyrddin","Enw_Cymrae":"Sir Gaerfyrddin"},
-		"W000050":{"q":3,"r":-2,"n":"5","No_Rhif":"5","English_Na":"Ceredigion Penfro","Enw_Cymrae":"Ceredigion Penfro"},
-		"W000020":{"q":3,"r":0,"n":"2","No_Rhif":"2","English_Na":"Clwyd","Enw_Cymrae":"Clwyd"},
-		"W000040":{"q":3,"r":-1,"n":"4","No_Rhif":"4","English_Na":"Gwynedd Maldwyn","Enw_Cymrae":"Gwynedd Maldwyn"},
-		"W000070":{"q":0,"r":-4,"n":"7","No_Rhif":"7","English_Na":"Gŵyr Abertawe","Enw_Cymrae":"Gŵyr Abertawe"},
-		"W000100":{"q":2,"r":-3,"n":"10","No_Rhif":"10","English_Na":"Pontypridd Cynon Merthyr","Enw_Cymrae":"Pontypridd Cynon Merthyr"},
-		"W000120":{"q":4,"r":-3,"n":"12","No_Rhif":"12","English_Na":"Sir Fynwy Torfaen","Enw_Cymrae":"Sir Fynwy Torfaen"},
-		"W000130":{"q":4,"r":-4,"n":"13","No_Rhif":"13","English_Na":"Casnewydd Islwyn","Enw_Cymrae":"Casnewydd Islwyn"},
-		"W000160":{"q":1,"r":-4,"n":"16","No_Rhif":"16","English_Na":"Pen-y-bont Bro Morgannwg","Enw_Cymrae":"Pen-y-bont Bro Morgannwg"}
-	},
-	"version":"0.2"
+    "layout": "odd-r",
+    "hexes": {
+        "W000090": {
+            "q": 1,
+            "r": -3,
+            "n": "9",
+            "No_Rhif": "9",
+            "English_Na": "Afan Ogwr Rhondda",
+            "Enw_Cymrae": "Afan Ogwr Rhondda",
+            "colour": "#e6194b"
+        },
+        "W000030": {
+            "q": 4,
+            "r": 0,
+            "n": "3",
+            "No_Rhif": "3",
+            "English_Na": "Fflint Wrecsam",
+            "Enw_Cymrae": "Fflint Wrecsam",
+            "colour": "#fabebe"
+        },
+        "W000010": {
+            "q": 2,
+            "r": 0,
+            "n": "1",
+            "No_Rhif": "1",
+            "English_Na": "Bangor Conwy Môn",
+            "Enw_Cymrae": "Bangor Conwy Môn",
+            "colour": "#3cb44b"
+        },
+        "W000110": {
+            "q": 3,
+            "r": -3,
+            "n": "11",
+            "No_Rhif": "11",
+            "English_Na": "Blaenau Gwent Caerffili Rhymni",
+            "Enw_Cymrae": "Blaenau Gwent Caerffili Rhymni",
+            "colour": "#ffe119"
+        },
+        "W000080": {
+            "q": 4,
+            "r": -2,
+            "n": "8",
+            "No_Rhif": "8",
+            "English_Na": "Brycheiniog Tawe Nedd",
+            "Enw_Cymrae": "Brycheiniog Tawe Nedd",
+            "colour": "#4363d8"
+        },
+        "W000150": {
+            "q": 3,
+            "r": -4,
+            "n": "15",
+            "No_Rhif": "15",
+            "English_Na": "Caerdydd Ffynnon Taf",
+            "Enw_Cymrae": "Caerdydd Ffynnon Taf",
+            "colour": "#f58231"
+        },
+        "W000140": {
+            "q": 2,
+            "r": -4,
+            "n": "14",
+            "No_Rhif": "14",
+            "English_Na": "Caerdydd Penarth",
+            "Enw_Cymrae": "Caerdydd Penarth",
+            "colour": "#911eb4"
+        },
+        "W000060": {
+            "q": 0,
+            "r": -3,
+            "n": "6",
+            "No_Rhif": "6",
+            "English_Na": "Sir Gaerfyrddin",
+            "Enw_Cymrae": "Sir Gaerfyrddin",
+            "colour": "#aaffc3"
+        },
+        "W000050": {
+            "q": 3,
+            "r": -2,
+            "n": "5",
+            "No_Rhif": "5",
+            "English_Na": "Ceredigion Penfro",
+            "Enw_Cymrae": "Ceredigion Penfro",
+            "colour": "#f032e6"
+        },
+        "W000020": {
+            "q": 3,
+            "r": 0,
+            "n": "2",
+            "No_Rhif": "2",
+            "English_Na": "Clwyd",
+            "Enw_Cymrae": "Clwyd",
+            "colour": "#bcf60c"
+        },
+        "W000040": {
+            "q": 3,
+            "r": -1,
+            "n": "4",
+            "No_Rhif": "4",
+            "English_Na": "Gwynedd Maldwyn",
+            "Enw_Cymrae": "Gwynedd Maldwyn",
+            "colour": "#008080"
+        },
+        "W000070": {
+            "q": 0,
+            "r": -4,
+            "n": "7",
+            "No_Rhif": "7",
+            "English_Na": "Gŵyr Abertawe",
+            "Enw_Cymrae": "Gŵyr Abertawe",
+            "colour": "#e6beff"
+        },
+        "W000100": {
+            "q": 2,
+            "r": -3,
+            "n": "10",
+            "No_Rhif": "10",
+            "English_Na": "Pontypridd Cynon Merthyr",
+            "Enw_Cymrae": "Pontypridd Cynon Merthyr",
+            "colour": "#fffac8"
+        },
+        "W000120": {
+            "q": 4,
+            "r": -3,
+            "n": "12",
+            "No_Rhif": "12",
+            "English_Na": "Sir Fynwy Torfaen",
+            "Enw_Cymrae": "Sir Fynwy Torfaen",
+            "colour": "#800000"
+        },
+        "W000130": {
+            "q": 4,
+            "r": -4,
+            "n": "13",
+            "No_Rhif": "13",
+            "English_Na": "Casnewydd Islwyn",
+            "Enw_Cymrae": "Casnewydd Islwyn",
+            "colour": "#46f0f0"
+        },
+        "W000160": {
+            "q": 1,
+            "r": -4,
+            "n": "16",
+            "No_Rhif": "16",
+            "English_Na": "Pen-y-bont Bro Morgannwg",
+            "Enw_Cymrae": "Pen-y-bont Bro Morgannwg",
+            "colour": "#9a6324"
+        }
+    },
+    "version": "0.2"
 }
