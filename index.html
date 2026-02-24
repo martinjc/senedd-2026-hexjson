@@ -38,6 +38,15 @@
             float: left;
         }
 
+        #scmnc_map,
+        #scmncbg_map {
+            margin: 10px;
+            padding: 10px;
+            display: block;
+            width: 45%;
+            float: left;
+        }
+
         #info {
             clear: both;
             visibility: hidden;
@@ -95,6 +104,19 @@
         <div id="info">
             <h1>This is <span id="sc_name"></span></h1>
         </div>
+        <div id="scmncbg_map">
+            <h2>Multiple hexes per constituency, non-contiguous with background</h2>
+            <p><a
+                    href="https://github.com/martinjc/senedd-2026-hexjson/blob/main/data/senedd_2026_multiple_nc_with_background.hexjson">data</a>
+            </p>
+        </div>
+        <div id="scmnc_map">
+            <h2>Multiple hexes per constituency, non-contiguous</h2>
+            <p><a
+                    href="https://github.com/martinjc/senedd-2026-hexjson/blob/main/data/senedd_2026_multiple_nc.hexjson">data</a>
+            </p>
+        </div>
+
     </div>
 
 
@@ -113,6 +135,8 @@
 
         let sc_svg = d3.select('#sc_map').append('svg').attr("width", width).attr('height', height);
         let scer_svg = d3.select('#scm_map').append('svg').attr("width", width).attr('height', height);
+        let scmncbg_svg = d3.select('#scmncbg_map').append('svg').attr("width", width).attr('height', height);
+        let scmnc_svg = d3.select('#scmnc_map').append('svg').attr("width", width).attr('height', height);
 
         let projection = d3.geoMercator();
         let path = d3.geoPath().projection(projection);
@@ -133,15 +157,17 @@
             if (active.node() === this) {
                 reset(event, d);
             } else {
-                active.attr('opacity', '1.0')
-                active.attr('fill', (d) => d.colour || '#ccc')
-                active = d3.select(this);
-                active.attr('opacity', '0.5')
-                active.attr('fill', '#000')
-                d3.select("#info")
-                    .classed("active", true);
-                if (d.English_Na) {
-                    d3.select('#sc_name').text(d.English_Na);
+                if (d.colour !== '#ccc') {
+                    active.attr('opacity', '1.0')
+                    active.attr('fill', (d) => d.colour || '#ccc')
+                    active = d3.select(this);
+                    active.attr('opacity', '0.5')
+                    active.attr('fill', '#000')
+                    d3.select("#info")
+                        .classed("active", true);
+                    if (d.English_Na) {
+                        d3.select('#sc_name').text(d.English_Na);
+                    }
                 }
             }
         }
@@ -149,7 +175,9 @@
         Promise.all([
             d3.json('data/senedd_2026.hexjson'),
             d3.json('data/senedd_2026_multiple.hexjson'),
-        ]).then(([sc_hexes, sc_hexes_multiple]) => {
+            d3.json('data/senedd_2026_multiple_nc_with_background.hexjson'),
+            d3.json('data/senedd_2026_multiple_nc.hexjson')
+        ]).then(([sc_hexes, sc_hexes_multiple, sc_hexes_multiple_nc_with_background, sc_hexes_multiple_nc]) => {
 
             sc_hexes_rendered = d3.renderHexJSON(sc_hexes, width - margin.left - margin.right, height - margin.top - margin.bottom);
             let sc_hexmap = sc_svg.selectAll('g')
@@ -194,7 +222,69 @@
                         .attr('y2', (boundary) => boundary.y2 + margin.top)
                         .attr('fill', 'none')
                         .attr('stroke', '#fff')
-                        .attr('stroke-width', 3)
+                        .attr('stroke-width', 5)
+                });
+
+            let sc_hexes_multiple_nc_rendered = d3.renderHexJSON(sc_hexes_multiple_nc, width - margin.left - margin.right, height - margin.top - margin.bottom);
+
+            let sc_hexes_multiple_nc_hexmap = scmnc_svg.selectAll('g')
+                .data(sc_hexes_multiple_nc_rendered)
+                .join((enter) => {
+                    enter.append('g')
+                        .attr('transform', (hex) => `translate(${hex.x + margin.left},${hex.y + margin.top})`)
+                        .append('polygon')
+                        .attr('points', (hex) => hex.points)
+                        .attr('stroke', '#eee')
+                        .attr('fill', (hex) => hex.colour || '#ccc')
+                        .attr('stroke-width', 1)
+                        .attr('id', (hex) => hex.key)
+                        .attr('data-name', (hex) => hex.name)
+                        .on('click', clicked);
+                });
+
+            let sc_hexes_multiple_boundaries = d3.getBoundarySegmentsForHexJSON(sc_hexes_multiple_nc, width - margin.left - margin.right, height - margin.top - margin.bottom, "English_Na");
+            let nc_boundaries = scmnc_svg.selectAll('line')
+                .data(sc_hexes_multiple_boundaries)
+                .join((enter) => {
+                    enter.append('line')
+                        .attr('x1', (boundary) => boundary.x1 + margin.left)
+                        .attr('y1', (boundary) => boundary.y1 + margin.top)
+                        .attr('x2', (boundary) => boundary.x2 + margin.left)
+                        .attr('y2', (boundary) => boundary.y2 + margin.top)
+                        .attr('fill', 'none')
+                        .attr('stroke', '#fff')
+                        .attr('stroke-width', 5)
+                });
+
+
+            let sc_hexes_multiple_nc_with_background_rendered = d3.renderHexJSON(sc_hexes_multiple_nc_with_background, width - margin.left - margin.right, height - margin.top - margin.bottom);
+            let scmncbg_hexmap = scmncbg_svg.selectAll('g')
+                .data(sc_hexes_multiple_nc_with_background_rendered)
+                .join((enter) => {
+                    enter.append('g')
+                        .attr('transform', (hex) => `translate(${hex.x + margin.left},${hex.y + margin.top})`)
+                        .append('polygon')
+                        .attr('points', (hex) => hex.points)
+                        .attr('stroke', '#eee')
+                        .attr('fill', (hex) => hex.colour || '#ccc')
+                        .attr('stroke-width', 1)
+                        .attr('id', (hex) => hex.key)
+                        .attr('data-name', (hex) => hex.name)
+                        .on('click', clicked);
+                });
+
+            let sc_hexes_bg_boundaries = d3.getBoundarySegmentsForHexJSON(sc_hexes_multiple_nc_with_background, width - margin.left - margin.right, height - margin.top - margin.bottom, "English_Na");
+            let bg_boundaries = scmncbg_svg.selectAll('line')
+                .data(sc_hexes_bg_boundaries)
+                .join((enter) => {
+                    enter.append('line')
+                        .attr('x1', (boundary) => boundary.x1 + margin.left)
+                        .attr('y1', (boundary) => boundary.y1 + margin.top)
+                        .attr('x2', (boundary) => boundary.x2 + margin.left)
+                        .attr('y2', (boundary) => boundary.y2 + margin.top)
+                        .attr('fill', 'none')
+                        .attr('stroke', '#fff')
+                        .attr('stroke-width', 5)
                 });
         });
 
